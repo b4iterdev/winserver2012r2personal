@@ -5,6 +5,7 @@ Windows Server 2012 R2 Persona Setup Script for b4iterdev
 
 Run this command in powershell:
 ```
-powershell -command "Invoke-WebRequest -OutFile C:\setup.bat -Uri https://github.com/b4iterdev/winserver2012r2personal/raw/main/setup.bat"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Invoke-WebRequest -OutFile C:\setup.bat -Uri https://github.com/b4iterdev/winserver2012r2personal/raw/main/setup.bat
 C:\setup.bat
 ```
